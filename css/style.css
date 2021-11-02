@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(18 103 72);
+}
+
+header {
+  text-align: center;
+  font-size: 50px;
+  color: aliceblue;
+}
+
+header button {
+  width: 100px;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 40px;
+  color: white;
+  background-color: yellowgreen;
+  cursor: pointer;
+}
+
+.container {
+  width: 500px;
+  margin: 60px auto;
+  border: 2px solid white;
+}
+
+.square {
+  float: left;
+  width: calc(100% / 8);
+  height: calc(100% / 8);
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.square span {
+  display: none;
+}
+
+.container-grid {
+  height: 500px;
+}
+
+.square.clicked-true span {
+  display: block;
+}
