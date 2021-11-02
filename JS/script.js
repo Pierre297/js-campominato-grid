@@ -11,6 +11,7 @@ con difficoltà 3 => tra 1 e 49 7 * 7
 
 // con if/else if/else collegare i bottoni ed eseguire la funzione corrispondente al livello scelto.
 
+// costanti griglia e bottoni
 const gridContainer = document.getElementById("grid");
 const gamemModeEasy = document.getElementById("easy-btn");
 const gamemModeMedium = document.getElementById("medium-btn");
@@ -28,7 +29,7 @@ let thirdOption = hardButton;
 
     for(let i = 0; i < 100; i++){
     let node = document.createElement("div");
-    node.classList.add("square");
+    node.classList.add("square-easy");
 
     gridContainer.appendChild(node);
 
@@ -40,7 +41,7 @@ function middleButton() {
 
     for(let i = 0; i < 81; i++){
     let node = document.createElement("div");
-    node.classList.add("square");
+    node.classList.add("square-middle");
 
     gridContainer.appendChild(node);
 
@@ -53,9 +54,15 @@ function hardButton() {
 
     for(let i = 0; i < 49; i++){
     let node = document.createElement("div");
-    node.classList.add("square");
+    node.classList.add("square-hard");
 
     gridContainer.appendChild(node);
 
     }
 }
+
+// esegui le funzioni in base al click del bottone
+
+gamemModeEasy.addEventListener('click',
+
+)

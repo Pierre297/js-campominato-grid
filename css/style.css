@@ -30,10 +30,26 @@ header button {
   border: 2px solid white;
 }
 
-.square {
+.square-easy {
   float: left;
   width: calc(100% / 10);
   height: calc(100% / 10);
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.square-middle {
+  float: left;
+  width: calc(100% / 9);
+  height: calc(100% / 9);
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.square-hard {
+  float: left;
+  width: calc(100% / 7);
+  height: calc(100% / 7);
   border: 2px solid white;
   cursor: pointer;
 }
