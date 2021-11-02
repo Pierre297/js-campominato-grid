@@ -32,8 +32,8 @@ header button {
 
 .square {
   float: left;
-  width: calc(100% / 8);
-  height: calc(100% / 8);
+  width: calc(100% / 10);
+  height: calc(100% / 10);
   border: 2px solid white;
   cursor: pointer;
 }
