@@ -16,53 +16,52 @@ const gridContainer = document.getElementById("grid");
 const gamemModeEasy = document.getElementById("easy-btn");
 const gamemModeMedium = document.getElementById("medium-btn");
 const gamemModeHard = document.getElementById("hard-btn");
+const clickBox = document.getElementsByClassName("square-easy");
 
-// dichiarazioni funzioni
-let firstOption = easyButton;
-let secondOption = middleButton;
-let thirdOption = hardButton;
-
-
-
-// primo ciclo modalità facile
- function easyButton() {
-
-    for(let i = 0; i < 100; i++){
-    let node = document.createElement("div");
-    node.classList.add("square-easy");
-
-    gridContainer.appendChild(node);
-
-    }
-}
-
-// secondo ciclo modalità media
-function middleButton() {
-
-    for(let i = 0; i < 81; i++){
-    let node = document.createElement("div");
-    node.classList.add("square-middle");
-
-    gridContainer.appendChild(node);
-
-    }
-}
-
-
-// terzo ciclo modalità difficile
-function hardButton() {
-
-    for(let i = 0; i < 49; i++){
-    let node = document.createElement("div");
-    node.classList.add("square-hard");
-
-    gridContainer.appendChild(node);
-
-    }
-}
+// clickBox.addEventListener('click', function(){
+//     for(let i = 0; i < 100; i++){
+//         var colorBox = document.getElementsByClassName("square-easy");
+//         colorBox.classList.add("clicked-true");
+//     }
+// });
 
 // esegui le funzioni in base al click del bottone
+gamemModeEasy.addEventListener('click', function() {
+    for(let i = 0; i < 100; i++){
+        let node = document.createElement("div");
+        node.classList.add("square-easy");
+    
+        gridContainer.appendChild(node);
 
-gamemModeEasy.addEventListener('click',
+        // display  none dei bottoni
+        var element = document.getElementById("header");
+        element.classList.add("button-none");
+    
+    }
+ });
 
-)
+gamemModeMedium.addEventListener('click', function() {
+    for(let i = 0; i < 81; i++){
+        let node = document.createElement("div");
+        node.classList.add("square-medium");
+    
+        gridContainer.appendChild(node);
+
+        // display  none dei bottoni
+        var element = document.getElementById("header");
+        element.classList.add("button-none");
+    }
+});
+
+gamemModeHard.addEventListener('click', function() {
+    for(let i = 0; i < 49; i++){
+        let node = document.createElement("div");
+        node.classList.add("square-hard");
+    
+        gridContainer.appendChild(node);
+
+        // display  none dei bottoni
+        var element = document.getElementById("header");
+        element.classList.add("button-none");
+    }
+});
