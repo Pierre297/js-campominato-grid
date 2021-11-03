@@ -17,51 +17,67 @@ const gamemModeEasy = document.getElementById("easy-btn");
 const gamemModeMedium = document.getElementById("medium-btn");
 const gamemModeHard = document.getElementById("hard-btn");
 const clickBox = document.getElementsByClassName("square-easy");
+let gamemode;
 
-// clickBox.addEventListener('click', function(){
-//     for(let i = 0; i < 100; i++){
-//         var colorBox = document.getElementsByClassName("square-easy");
-//         colorBox.classList.add("clicked-true");
-//     }
-// });
+// -------------------------------------------------------------------------------------------------------------------------------------------
 
-// esegui le funzioni in base al click del bottone
+// bottone gamemode easy
 gamemModeEasy.addEventListener('click', function() {
-    for(let i = 0; i < 100; i++){
-        let node = document.createElement("div");
-        node.classList.add("square-easy");
-    
-        gridContainer.appendChild(node);
+    gamemode = 100;
+    squareClass = "square-easy";
+    genGrid();
+    // display  none dei bottoni
+     var element = document.getElementById("header");
+     element.classList.add("button-none");
+        
+});
 
-        // display  none dei bottoni
-        var element = document.getElementById("header");
-        element.classList.add("button-none");
-    
-    }
- });
-
+//bottone gamemode medium
 gamemModeMedium.addEventListener('click', function() {
-    for(let i = 0; i < 81; i++){
-        let node = document.createElement("div");
-        node.classList.add("square-medium");
-    
-        gridContainer.appendChild(node);
+    gamemode = 81;
+    squareClass = "square-medium";
+    genGrid();
+    // display  none dei bottoni
+    var element = document.getElementById("header");
+    element.classList.add("button-none");
 
-        // display  none dei bottoni
-        var element = document.getElementById("header");
-        element.classList.add("button-none");
-    }
 });
 
+//bottone gamemode hard
 gamemModeHard.addEventListener('click', function() {
-    for(let i = 0; i < 49; i++){
-        let node = document.createElement("div");
-        node.classList.add("square-hard");
-    
-        gridContainer.appendChild(node);
+    gamemode = 49;
+    squareClass = "square-hard";
+    genGrid();
+    // display  none dei bottoni
+    var element = document.getElementById("header");
+    element.classList.add("button-none");
 
+});
+
+
+
+// funzione creazione griglia
+function genGrid(){
+    for(let i = 1; i <= gamemode; i++){
+        let node = document.createElement("div");
+        node.classList.add(squareClass);
+               
+         node.addEventListener('click',
+            function(){
+                node.innerText = i;
+                node.classList.add("clicked-true");
+
+            }
+        )
+            
+        gridContainer.appendChild(node);
+        
         // display  none dei bottoni
         var element = document.getElementById("header");
         element.classList.add("button-none");
+            
     }
-});
+};
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+

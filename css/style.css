@@ -28,6 +28,16 @@ header button {
   cursor: pointer;
 }
 
+header h2 {
+  color: rgb(173, 71, 71);
+  border: 1px solid black;
+  background-color: cadetblue;
+}
+
+header h4 {
+  margin-top: 20px;
+}
+
 .container {
   width: 500px;
   margin: 60px auto;
